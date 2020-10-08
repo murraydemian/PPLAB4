@@ -1,0 +1,11 @@
+<mat-spinner *ngIf="!ready"></mat-spinner>
+<mat-list *ngIf="ready">
+    <mat-list-item *ngFor="let pokemon of this.pokemons">
+        <p>{{pokemon.name}}</p>
+        <button mat-raised-button routerLink="/detalle/{{pokemon.name}}">Detalle</button>
+    </mat-list-item>
+</mat-list>
+<mat-paginator [length]="1050"
+              [pageSize]="20"
+            (page)="onPageChange($event)">  
+</mat-paginator>

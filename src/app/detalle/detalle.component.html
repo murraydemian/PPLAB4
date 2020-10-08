@@ -1,0 +1,24 @@
+<mat-spinner *ngIf="!pkReady" ></mat-spinner>
+<mat-card *ngIf="pkReady">
+    <mat-card-title>
+        {{pokemon.name}}
+    </mat-card-title>
+    <div class="galeria">
+        <img src="{{pokemon.sprites.front_default}}" alt="">
+        <img src="{{pokemon.sprites.back_default}}" alt="">
+    </div>
+    <mat-spinner *ngIf="!abReady" ></mat-spinner>
+    <div *ngIf="abReady">
+    <mat-card-title>
+        Abilities
+    </mat-card-title>
+        <div *ngFor="let ab of pokemon.abilities">
+            <label style="font-weight: bold;">{{ab.name}}</label>
+            <p>{{ab.effect_entries[1].effect}}</p>
+        </div>
+    </div>
+</mat-card>
+<!--
+    3. En la ruta detalle se debe mostrar el nombre, una galeria de imagenes, las
+    habilidades con sus detalles y el rango.
+ -->
