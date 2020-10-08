@@ -19,6 +19,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AbilityComponent } from './components/ability/ability.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ListadoComponent,
     DetalleComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AbilityComponent
   ],
   imports: [
     BrowserModule,

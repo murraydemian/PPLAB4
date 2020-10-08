@@ -13,8 +13,11 @@
         Abilities
     </mat-card-title>
         <div *ngFor="let ab of pokemon.abilities">
-            <label style="font-weight: bold;">{{ab.name}}</label>
-            <p>{{ab.effect_entries[1].effect}}</p>
+            <app-ability
+                abName="{{ab.name}}"
+                abEffect="{{ab.effect_entries[1].effect}}"
+                abGeneration="{{ab.generation.name}}">
+            </app-ability>
         </div>
     </div>
 </mat-card>

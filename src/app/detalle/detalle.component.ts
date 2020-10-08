@@ -18,11 +18,11 @@ export class DetalleComponent implements OnInit {
 
   ngOnInit(): void {
     this.nombrePokemon = this.route.snapshot.paramMap.get("pokemon");
-    console.log(this.nombrePokemon);
+    //console.log(this.nombrePokemon);
     this.datos.traerPokemon("https://pokeapi.co/api/v2/pokemon/" + this.nombrePokemon)
     .subscribe((pokemon : any) => {
       this.pokemon = pokemon;
-      console.log(pokemon);
+      //console.log(pokemon);
       this.pkReady = true;
       this.pokemon.abilities.forEach((ab : any) => {
         //console.log(ab);
